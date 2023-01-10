@@ -113,7 +113,7 @@ for (let i=0; i < finances.length; i++) {
     if (PLdifference <  largestPLDifference) {
      largestPLDifference = PLdifference;
     }
-     if (PLdifference <  smallestPLDifference) {
+     if (PLdifference >  smallestPLDifference) {
       smallestPLDifference = PLdifference;
 }}
 
