@@ -126,9 +126,9 @@ for (let i=0; i < finances.length; i++) {
 console.log(
    `Financial Report
    ----------------
-   Total months: ${totalMonths}
-   Net profit: ${netProfit}
-   Average profit change: ${averagePLChange.toFixed(2)}
-   Largest increasein profits: ${largestPLDate}: ${largestPLDifference}
-   Greatest decrease in profits: ${smallestPLDate}: ${smallestPLDifference}`
+   Total months: $${totalMonths}
+   Net profit: $${netProfit}
+   Average profit change: $${averagePLChange.toFixed(2)}
+   Largest increasein profits: ${largestPLDate}: $${largestPLDifference}
+   Greatest decrease in profits: ${smallestPLDate}: $${smallestPLDifference}`
 )
