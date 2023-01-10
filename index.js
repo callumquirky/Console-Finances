@@ -104,7 +104,7 @@ for (let i=0; i < finances.length; i++) {
    }
 }
 
-let averagePLChange = totalDifferences / totalMonths;
+let averagePLChange = totalDifferences / totalMonths-1;
 let largestPLDifference = 0;
 let smallestPLDifference = 0;
 
