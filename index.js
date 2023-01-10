@@ -125,5 +125,8 @@ console.log(
    `Financial Report`
    `----------------`
    `Total months: ${totalMonths}`
-   `Net profit: ${}`
+   `Net profit: ${netProfit}`
+   `Average profit change: ${averagePLChange}`
+   `Largest profit increase: ${largestPLDifference}`
+   `Smallest profit increase: ${smallestPLDifference}`
 )
