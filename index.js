@@ -107,28 +107,28 @@ for (let i=0; i < finances.length; i++) {
 let averagePLChange = totalDifferences / totalMonths-1;
 let largestPLDifference = 0;
 let smallestPLDifference = 0;
+let largestPLDate = 0;
+let smallestPLDate = 0;
 
 for (let i=0; i < finances.length; i++) {
    if (i > 0){
       let PLdifference = finances[i][1] - finances[i-1][1];
       if (PLdifference >  largestPLDifference) {
          largestPLDifference = PLdifference;
+         largestPLDate = finances[i][0];
         }
          if (PLdifference <  smallestPLDifference) {
           smallestPLDifference = PLdifference;
+         smallestPLDate = finances[i][0];
     }}
    } 
     
-
-
-
-
 console.log(
    `Financial Report
    ----------------
    Total months: ${totalMonths}
    Net profit: ${netProfit}
    Average profit change: ${averagePLChange.toFixed(2)}
-   Largest increasein profits: ${largestPLDifference}
-   Greatest decrease in profits: ${smallestPLDifference}`
+   Largest increasein profits: ${largestPLDate}: ${largestPLDifference}
+   Greatest decrease in profits: ${smallestPLDate}: ${smallestPLDifference}`
 )
