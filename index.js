@@ -97,9 +97,11 @@ for (let i=0; i< finances.length; i++) {
 
 let totalDifferences = 0
 
-for (i=0; i < finances.length; i++) {
-   let PLdifference = finances[i][1] - finances[i - 1][1];
-   totalDifferences += PLdifference;
+for (let i=0; i < finances.length; i++) {
+   let PLdifference = finances[i][1] - finances[i-1][1];
+   if (i > 0){
+      totalDifferences += PLdifference;
+   }
 }
 
 averagePLChange = totalDifferences / totalMonths;
@@ -109,7 +111,7 @@ let largestPLDifference = 0;
 let smallestPLDifference = 0;
 
 for (let i=0; i < finances.length; i++) {
-    let PLdifference = finances[i][1] - finances[i - 1][1];
+    let PLdifference = finances[i][1] - finances[i-1][1];
     if (PLdifference <  largestPLDifference) {
      largestPLDifference = PLdifference;
     }
