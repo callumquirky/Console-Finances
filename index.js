@@ -91,20 +91,27 @@ let totalMonths = finances.length
 
 let netProfit = 0
 
-for (i=0; index< finances; index++) {
+for (let i=0; index< finances; index++) {
    netProfit += finances[i][1]
 }
 
-// average change of PL
+let totalDifferences = 0
+
+for (i=0; i < finances; i++)
 
 
+let largestPLDifference = 0
 
+for (let i=0; i < finances; i++) {
+    let PLdifference = finances[i][1] - finances[i - 1][1]
+    if PLdifference <  largestPLDifference {
+     largestPLDifference = finances[i][1] - finances[i - 1][1] 
+}}
 
+let smallestPLDifference = 0
 
-let largestPLDifference = 0;
-
-for (i=0; index < finances; index++) {
-   let PLdifference = finances[i][1] - finances[i - 1][1]
-   if finances[i][1] - finances[i - 1][1] <  largestPLDifference {
-    largestPLDifference = finances[i][1] - finances[i - 1][1]
-}
+for (let i=0; i < finances; i++) {
+    let PLdifference = finances[i][1] - finances[i - 1][1]
+    if PLdifference <  smallestPLDifference {
+     smallestPLDifference = finances[i][1] - finances[i - 1][1] 
+}}
