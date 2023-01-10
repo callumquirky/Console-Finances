@@ -89,59 +89,22 @@ var finances = [
 
 let totalMonths = finances.length
 
-let netProfit = finances.reduce(add, 0);
+let netProfit = 0
 
-function add(accumulator, a) {
-  return accumulator + a;
+for (i=0; index< finances; index++) {
+   netProfit += finances[i][1]
 }
 
+// average change of PL
 
 
-// average changes of profit/loss over the entire period
-
-let financesPL = []
-
-for (i = 0; i < finances.length; i++) {
-	financesPL.push(finances [i][1]);
-	};
 
 
-const differenceArray = (financesPL) => {
-   const differenceArray = [];
-   for(let i = 1; i < financesPL.length; i++){
-      differenceArray.push(financesPL[i] - financesPL[i - 1]);
-   };
-   return differenceArray;
-};
 
-let totalDifferences = 0
+let largestPLDifference = 0;
 
-for (let i = 0; i < differenceArray.length; i++) {
-	totalDifferences += differenceArray[i]
+for (i=0; index < finances; index++) {
+   let PLdifference = finances[i][1] - finances[i - 1][1]
+   if finances[i][1] - finances[i - 1][1] <  largestPLDifference {
+    largestPLDifference = finances[i][1] - finances[i - 1][1]
 }
-
-
-averageChanges = totalDifferences / totalMonths
-
-// largestProfitChange = Math.max(...differenceArray);
-
-largestDifferenceIndex = differenceArray.indexOf(largestProfitChange);
-
-console.log (largestProfitChange);
-console.log (differenceArray);
-
-
-smallestProfitChange = Math.min(differenceArray);
-smallestDifferenceIndex = differenceArray.indexOf(smallestProfitChange)
-
-console.log (finances[smallestDifferenceIndex[0]] + smallestProfitChange)
-
-console.log (
-    `Financial Analysis`
-    `-----------------------`
-    `Total Months: ${totalMonths}`
-    `Net Profit/Loss: $${netProfit}`
-    `Average Change: $${averageChanges}`
-    `Greatest Increase In Profits: $${finances[largestDifferenceIndex[0]] + largestProfitChange}` 
-    `Greatest Decreased in Profits: $${finances[smallestDifferenceIndex[0]] + smallestProfitChange}`
-);
