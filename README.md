@@ -6,7 +6,7 @@ This application uses JavaScript to run a report on financial data in an array. 
 
 In the case of the greatest increase/decrease of profits, the application also identifies the date at which this occured. 
 
-[screenshot-of-finished-application](images/console-finance-img.PNG)
+(images/console-finance-img.PNG)
 
 JavaScript application running financial reports.
 
