@@ -91,7 +91,7 @@ let totalMonths = finances.length
 
 let netProfit = 0
 
-for (let i=0; index< finances; index++) {
+for (let i=0; i< finances; i++) {
    netProfit += finances[i][1]
 }
 
@@ -110,10 +110,10 @@ let smallestPLDifference = 0
 
 for (let i=0; i < finances; i++) {
     let PLdifference = finances[i][1] - finances[i - 1][1]
-    if PLdifference <  largestPLDifference {
+    if (PLdifference <  largestPLDifference) {
      largestPLDifference = PLdifference
     }
-     if PLdifference <  smallestPLDifference {
+     if (PLdifference <  smallestPLDifference) {
       smallestPLDifference = PLdifference
 }}
 
@@ -121,8 +121,8 @@ for (let i=0; i < finances; i++) {
 
 
 console.log(
-   `Financial Report`
-   `----------------`
+   "Financial Report"
+   "----------------"
    `Total months: ${totalMonths}`
    `Net profit: ${netProfit}`
    `Average profit change: ${averagePLChange}`
