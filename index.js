@@ -111,10 +111,10 @@ let smallestPLDifference = 0;
 for (let i=0; i < finances.length; i++) {
    if (i > 0){
       let PLdifference = finances[i][1] - finances[i-1][1];
-      if (PLdifference <  largestPLDifference) {
+      if (PLdifference >  largestPLDifference) {
          largestPLDifference = PLdifference;
         }
-         if (PLdifference >  smallestPLDifference) {
+         if (PLdifference <  smallestPLDifference) {
           smallestPLDifference = PLdifference;
     }}
    } 
@@ -129,6 +129,6 @@ console.log(
    Total months: ${totalMonths}
    Net profit: ${netProfit}
    Average profit change: ${averagePLChange.toFixed(2)}
-   Largest profit increase: ${largestPLDifference}
-   Smallest profit increase: ${smallestPLDifference}`
+   Largest increasein profits: ${largestPLDifference}
+   Greatest decrease in profits: ${smallestPLDifference}`
 )
