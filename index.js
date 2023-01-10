@@ -106,20 +106,19 @@ averagePLChange = totalDifferences / totalMonths
 
 
 let largestPLDifference = 0
-
-for (let i=0; i < finances; i++) {
-    let PLdifference = finances[i][1] - finances[i - 1][1]
-    if PLdifference <  largestPLDifference {
-     largestPLDifference = finances[i][1] - finances[i - 1][1] 
-}}
-
 let smallestPLDifference = 0
 
 for (let i=0; i < finances; i++) {
     let PLdifference = finances[i][1] - finances[i - 1][1]
-    if PLdifference <  smallestPLDifference {
-     smallestPLDifference = finances[i][1] - finances[i - 1][1] 
+    if PLdifference <  largestPLDifference {
+     largestPLDifference = PLdifference
+    }
+     if PLdifference <  smallestPLDifference {
+      smallestPLDifference = PLdifference
 }}
+
+
+
 
 console.log(
    `Financial Report`
