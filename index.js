@@ -97,7 +97,12 @@ for (let i=0; index< finances; index++) {
 
 let totalDifferences = 0
 
-for (i=0; i < finances; i++)
+for (i=0; i < finances; i++) {
+   let PLdifference = finances[i][1] - finances[i - 1][1];
+   totalDifferences += PLdifference
+}
+
+averagePLChange = totalDifferences / totalMonths
 
 
 let largestPLDifference = 0
@@ -115,3 +120,10 @@ for (let i=0; i < finances; i++) {
     if PLdifference <  smallestPLDifference {
      smallestPLDifference = finances[i][1] - finances[i - 1][1] 
 }}
+
+console.log(
+   `Financial Report`
+   `----------------`
+   `Total months: ${totalMonths}`
+   `Net profit: ${}`
+)
