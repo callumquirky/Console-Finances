@@ -91,41 +91,41 @@ let totalMonths = finances.length
 
 let netProfit = 0
 
-for (let i=0; i< finances; i++) {
-   netProfit += finances[i][1]
+for (let i=0; i< finances.length; i++) {
+   netProfit += finances[i][1];
 }
 
 let totalDifferences = 0
 
-for (i=0; i < finances; i++) {
+for (i=0; i < finances.length; i++) {
    let PLdifference = finances[i][1] - finances[i - 1][1];
-   totalDifferences += PLdifference
+   totalDifferences += PLdifference;
 }
 
-averagePLChange = totalDifferences / totalMonths
+averagePLChange = totalDifferences / totalMonths;
 
 
-let largestPLDifference = 0
-let smallestPLDifference = 0
+let largestPLDifference = 0;
+let smallestPLDifference = 0;
 
-for (let i=0; i < finances; i++) {
-    let PLdifference = finances[i][1] - finances[i - 1][1]
+for (let i=0; i < finances.length; i++) {
+    let PLdifference = finances[i][1] - finances[i - 1][1];
     if (PLdifference <  largestPLDifference) {
-     largestPLDifference = PLdifference
+     largestPLDifference = PLdifference;
     }
      if (PLdifference <  smallestPLDifference) {
-      smallestPLDifference = PLdifference
+      smallestPLDifference = PLdifference;
 }}
 
 
 
 
 console.log(
-   "Financial Report"
-   "----------------"
-   `Total months: ${totalMonths}`
-   `Net profit: ${netProfit}`
-   `Average profit change: ${averagePLChange}`
-   `Largest profit increase: ${largestPLDifference}`
-   `Smallest profit increase: ${smallestPLDifference}`
+   `Financial Report
+   ----------------
+   Total months: ${totalMonths}
+   Net profit: ${netProfit}
+   Average profit change: ${averagePLChange}
+   Largest profit increase: ${largestPLDifference}
+   Smallest profit increase: ${smallestPLDifference}`
 )
